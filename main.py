@@ -1,4 +1,5 @@
 import requests
+from bs4 import BeautifulSoup
 
 YEARS = [2023, 2024, 2025]
 STATES = [
