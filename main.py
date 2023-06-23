@@ -38,11 +38,14 @@ def requestHolidays(year, state):
 
 
 def formatDate(date):
-    pass
+    day, month, year = date.split('.')
+    return f"{year}-{month.zfill(2)}-{day.zfill(2)}"
 
 
 def exportResults():
     pass
 
 
-print(requestHolidays(2024, "bayern"))
+dates = requestHolidays(2024, "bayern")
+for date in dates:
+    print(formatDate(date))
